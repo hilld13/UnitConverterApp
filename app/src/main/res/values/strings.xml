@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">UnitConverterApp</string>
+    <string name="to_km_h">To km/h</string>
+    <string name="to_furlong_fortnight">to Furlong/Fortnight</string>
+    <string name="furlongs_per_fortnight">Furlongs per Fortnight</string>
+    <string name="km_h">km/h</string>
+</resources>
