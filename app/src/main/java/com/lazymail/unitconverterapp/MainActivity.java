@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
     public void calc_kph (View view) {
 
         // copied from https://javawithumer.com/2019/07/get-value-edittext.html
-        // I have no idea how this really works
+        // I have some idea how this really works
         EditText e = (EditText) findViewById(R.id.editText_fpf);
         String temp = e.getText().toString();
         double value = 0;
@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
     public void calc_fpf(View view) {
 
         // copied from https://javawithumer.com/2019/07/get-value-edittext.html
-        // I have no idea how this really works.
+        // I have some idea how this really works
         EditText e = (EditText) findViewById(R.id.editText_kph);
         String temp = e.getText().toString();
         double value = 0;
