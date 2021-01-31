@@ -48,7 +48,8 @@ public class MainActivity extends AppCompatActivity {
             strDouble = String.format(Locale.CANADA, "%.2f", val_kph);
         }
         e2.setText(strDouble);
-
+        
+        Toast.makeText(getApplicationContext(), "Calculation Complete", Toast.LENGTH_SHORT).show();
     }
 
     public void calc_fpf(View view) {
@@ -67,5 +68,7 @@ public class MainActivity extends AppCompatActivity {
         EditText e2 = (EditText) findViewById(R.id.editText_fpf);
         String strDouble = String.format(Locale.CANADA,"%.1f", val_fpf);
         e2.setText(strDouble);
+        
+        Toast.makeText(getApplicationContext(), "Calculation Complete", Toast.LENGTH_SHORT).show();
     }
 }
