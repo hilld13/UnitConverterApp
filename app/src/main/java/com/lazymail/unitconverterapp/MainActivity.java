@@ -41,7 +41,12 @@ public class MainActivity extends AppCompatActivity {
         val_kph = val_fpf * 0.00297619 * 0.2011680;
 
         EditText e2 = (EditText) findViewById(R.id.editText_kph);
-        String strDouble = String.format(Locale.CANADA, "%.1f", val_kph);
+        String strDouble = "";
+        if (val_fpf < 167) {
+            strDouble = String.format(Locale.CANADA, "%.4f", val_kph);
+        } else {
+            strDouble = String.format(Locale.CANADA, "%.2f", val_kph);
+        }
         e2.setText(strDouble);
 
     }
