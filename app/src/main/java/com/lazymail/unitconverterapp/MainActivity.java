@@ -15,8 +15,6 @@ public class MainActivity extends AppCompatActivity {
 
     private double val_kph = 0;
     private double val_fpf = 0;
-    private TextView editText_kph;
-    private TextView editText_fpf;
 
     public MainActivity() {
     }
@@ -68,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
         val_fpf = val_kph * 336 * 4.970969;
 
         EditText e2 = (EditText) findViewById(R.id.editText_fpf);
-        String strDouble = String.format(Locale.CANADA,"%.1f", val_fpf);
+        String strDouble = String.format(Locale.CANADA,"%.2f", val_fpf);
         e2.setText(strDouble);
 
         Toast.makeText(getApplicationContext(), "Calculation Complete", Toast.LENGTH_SHORT).show();
