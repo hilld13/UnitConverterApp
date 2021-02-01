@@ -42,7 +42,10 @@ public class MainActivity extends AppCompatActivity {
 
         EditText e2 = (EditText) findViewById(R.id.editText_kph);
         String strDouble = "";
-        if (val_fpf < 167) {
+        // these if statements are just to make formatting nice.
+        if (val_fpf < 40) {
+            strDouble = String.format(Locale.CANADA, "%.6f", val_kph);
+        } else if (val_fpf < 167) {
             strDouble = String.format(Locale.CANADA, "%.4f", val_kph);
         } else {
             strDouble = String.format(Locale.CANADA, "%.2f", val_kph);
