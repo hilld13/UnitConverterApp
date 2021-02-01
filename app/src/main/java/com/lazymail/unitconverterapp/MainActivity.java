@@ -10,6 +10,7 @@ import android.widget.Toast;
 
 import java.util.Locale;
 
+// this comment is here to test github push
 public class MainActivity extends AppCompatActivity {
 
     private double val_kph = 0;
@@ -30,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
     public void calc_kph (View view) {
 
         // copied from https://javawithumer.com/2019/07/get-value-edittext.html
-        // I have some idea how this really works
+        // I have no idea how this really works
         EditText e = (EditText) findViewById(R.id.editText_fpf);
         String temp = e.getText().toString();
         double value = 0;
@@ -42,20 +43,21 @@ public class MainActivity extends AppCompatActivity {
 
         EditText e2 = (EditText) findViewById(R.id.editText_kph);
         String strDouble = "";
-        if (val_fpf < 167) {
+        // these if statements are just to make formatting nice. That's all.
+        if (val_fpf < 40) {
+            strDouble = String.format(Locale.CANADA, "%.6f", val_kph);
+        } else if(val_fpf < 167) {
             strDouble = String.format(Locale.CANADA, "%.4f", val_kph);
         } else {
             strDouble = String.format(Locale.CANADA, "%.2f", val_kph);
         }
         e2.setText(strDouble);
-        
+
         Toast.makeText(getApplicationContext(), "Calculation Complete", Toast.LENGTH_SHORT).show();
     }
 
     public void calc_fpf(View view) {
 
-        // copied from https://javawithumer.com/2019/07/get-value-edittext.html
-        // I have some idea how this really works
         EditText e = (EditText) findViewById(R.id.editText_kph);
         String temp = e.getText().toString();
         double value = 0;
@@ -68,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
         EditText e2 = (EditText) findViewById(R.id.editText_fpf);
         String strDouble = String.format(Locale.CANADA,"%.1f", val_fpf);
         e2.setText(strDouble);
-        
+
         Toast.makeText(getApplicationContext(), "Calculation Complete", Toast.LENGTH_SHORT).show();
     }
 }
